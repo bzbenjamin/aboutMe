@@ -18,18 +18,24 @@
 	<jsp:include page="header.jsp" />
 
 
-	<div class="container table-responsive bio_intro">
+	<div class="container table-responsive bio_intro content">
 
-		<div id="dashboard">
-			<img src="resources/img/small/IMG_1197.JPG" width="70" height="70"
-				alt="blue"> <img src="resources/img/small/IMG_1208.JPG"
-				width="70" height="70" alt="green"> <img
+		<div id="dashboard" class="main">
+			<div id="gallery"><a href="resources/img/small/IMG_1197.JPG" rel="gallery" title="moon scene"><img src="resources/img/small/IMG_1197.JPG" width="70" height="70"
+				></a>
+				<a href="resources/img/small/IMG_1208.JPG" rel="gallery" title="capsule"> <img src="resources/img/small/IMG_1208.JPG"
+				width="70" height="70" > </a>
+				<a href="resources/img/small/IMG_1226.JPG" rel="gallery" title="future robot"><img
 				src="resources/img/small/IMG_1226.JPG" width="70" height="70"
-				alt="orange"> <img src="resources/img/small/IMG_1227.JPG"
-				width="70" height="70" alt="purple"> <img
+				></a>
+				<a href="resources/img/small/IMG_1227.JPG" rel="gallery" title="space chamber"> <img src="resources/img/small/IMG_1227.JPG"
+				width="70" height="70" ></a>
+				<a href="resources/img/small/IMG_1232.JPG" rel="gallery" title="rocket engine"> <img
 				src="resources/img/small/IMG_1232.JPG" width="70" height="70"
-				alt="red"> <img src="resources/img/small/IMG_1233.JPG"
-				width="70" height="70" alt="yellow">
+				></a>
+				<a href="resources/img/small/IMG_1233.JPG" rel="gallery" title="rocket selfie"> <img src="resources/img/small/IMG_1233.JPG"
+				width="70" height="70" ></a>
+			</div>
 		</div>
 
 		<div class="jumbotron table-responsive">
@@ -45,6 +51,7 @@
 				but not limited to Python Django, Ruby on Rails, AngularJS, and
 				PHP/WordPress.</p>
 		</div>
+	
 	</div>
 
 	<jsp:include page="footer.jsp" />

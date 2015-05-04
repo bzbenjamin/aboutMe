@@ -102,6 +102,17 @@ $(document)
 						  ); 
 					
 					$('.bio_intro').hide().fadeIn(2000);// fade in effect at home page
+					
+					$('#gallery a').fancybox({
+						overlayColor: '#060',
+						overlayOpacity: .3,
+						transitionIn: 'elastic',
+						transitionOut: 'elastic',
+						easingIn: 'easeInSine',
+						easingOut: 'easeOutSine',
+						titlePosition: 'outside' ,		
+						cyclic: true
+					});
 
 				});
 

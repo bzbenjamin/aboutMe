@@ -21,15 +21,12 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-
-<!--   
-https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js
-<script type="text/javascript">
-$(document).ready(function() {
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+	rel="sylesheet">
 	
-	$('body').hide().fadeIn(2000);
-});
-</script> -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 
 
