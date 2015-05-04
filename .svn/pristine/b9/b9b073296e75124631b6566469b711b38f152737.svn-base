@@ -1,0 +1,122 @@
+$(document)
+		.ready(
+				function() {
+					console.log("before the stuff,it works here");
+					$('#contact_name').on('input', function() {
+						console.log("it works here");
+						var input = $(this);
+						var is_name = input.val();
+						if (is_name) {
+							input.removeClass("invalid").addClass("valid");
+						} else {
+							input.removeClass("valid").addClass("invalid");
+						}
+					});
+
+					$('#contact_email')
+							.on(
+									'input',
+									function() {
+										var input = $(this);
+										var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+										var is_email = re.test(input.val());
+										if (is_email) {
+											input.removeClass("invalid")
+													.addClass("valid");
+										} else {
+											input.removeClass("valid")
+													.addClass("invalid");
+										}
+									});
+
+					$('#contact_subject').on('input', function() {
+
+						var input = $(this);
+						var is_subject = input.val();
+						if (is_subject) {
+							input.removeClass("invalid").addClass("valid");
+						} else {
+							input.removeClass("valid").addClass("invalid");
+						}
+					});
+
+					/*
+					 * $('#contact_website').on('input', function() { var
+					 * input=$(this); if
+					 * (input.val().substring(0,4)=='www.'){input.val('http://www.'+input.val().substring(4));}
+					 * var re =
+					 * /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
+					 * var is_url=re.test(input.val());
+					 * if(is_url){input.removeClass("invalid").addClass("valid");}
+					 * else{input.removeClass("valid").addClass("invalid");} });
+					 */
+
+					$('#contact_message').keyup(function(event) {
+						var input = $(this);
+						var message = $(this).val();
+						console.log(message);
+						if (message) {
+							input.removeClass("invalid").addClass("valid");
+						} else {
+							input.removeClass("valid").addClass("invalid");
+						}
+					});
+
+					$("#contact_submit input").click(
+							function(event) {
+								console.log("#contact_submit,it works here");
+								var form_data = $("#contact").serializeArray();
+								var error_free = true;
+								for ( var input in form_data) {
+									var element = $("#contact_"
+											+ form_data[input]['name']);
+									var valid = element.hasClass("valid");
+									var error_element = $("span", element
+											.parent());
+									if (!valid) {
+										error_element.removeClass("error")
+												.addClass("error_show");
+										error_free = false;
+									} else {
+										error_element.removeClass("error_show")
+												.addClass("error");
+									}
+								}
+								if (!error_free) {
+									event.preventDefault();
+								}
+
+							});
+
+				});
+
+/*
+ * $(function() { setTimeout($( "#dialog" ).dialog(),5000); });
+ * 
+ */
+
+function mycheck(chk)
+{
+	  var divsToHide = document.getElementsByClassName("cf");
+	
+	if(chk.checked===true)
+	{/*
+		$("#contact_feedback").show();
+		
+		document.getElementbyId("#contact_feedback").style.display = "block";*/
+
+	    /*for(var i = 0; i < divsToHide.length; i++)
+	    {
+	    divsToHide[i].style.visibility="visible";
+	    }*/
+		document.getElementbyId("contact_feedback").style.display = "block";
+	}
+}
+/*$(document).ready(function(){
+    $("#contact_checkbox").checked(function(){
+        $("p").hide();
+    });
+    $("#contact_checkbox").uncheked(function(){
+        $("p").show();
+    });
+});*/
